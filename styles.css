@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+:root {
+    --green: #00ff38;
+}
+
+body{
+    margin:0;
+    overflow:hidden;
+    font-family: Poppins;
+}
+
+#image{
+    position: absolute;
+    width:40%;
+    right: -10%;
+    bottom: -20%;
+    transition:transform 3000ms ease;
+    display: inline;  
+}
+
+#image2 {
+    position: absolute;
+    width: 40%;
+    left: -10%;
+    top: -20%;
+    transition: transform 1500ms ease;
+    transform: rotate(180deg) scale(10);
+    display: none;
+}
+#image2.active{
+    transform: scale(0.1) rotate(180deg) translate(500%, 500%);
+}
+
+#image.active{
+    transform: scale(10);
+}
+
+#main-text{
+    margin: 0;
+    position:relative;
+    left:10%;
+    top:30%;
+    font-size: 100px;
+    font-weight: bold;
+    transition: all 1s ease;
+    cursor: pointer;
+}
+
+#main-text:hover {
+        /*background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(0,255,4,1) 100%);
+	    */color: var(--green);        
+
+}
+
+.buttons{
+    float:right;
+    display:flex;
+    margin-top:30px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
+    .buttons > p {
+        margin-right: 100px;
+        display: inline-block;
+        position: relative;
+            cursor: pointer;
+    }
+
+.buttons > p:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 4px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--green);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.buttons > p:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+#show-page{
+    display: none;
+}
+
+.mid{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#ytb{
+    width:  50%;
+    height: 70%;
+}
